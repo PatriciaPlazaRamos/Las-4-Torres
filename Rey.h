@@ -18,7 +18,13 @@ class Rey : public Pieza
 	
 
 	Rey(char _color) {
-	
+		color = _color;
+		tipo = TYPEPIEZA(REY);
+		imagen1.setCenter(-1, -0.5); //blancas
+		imagen1.setSize(3, 5);
+		imagen2.setCenter(-1, -0.5);
+		imagen2.setSize(3, 5);
+
 	}
 
 	virtual~Rey() {};
@@ -26,6 +32,5 @@ class Rey : public Pieza
 
 	void dibuja() override;
 
-	// PRUBEBA
 	bool mover(int xInicial, int yInicial, int xFinal, int yFinal, bool ocupado, Tablero& t) override;
 };
