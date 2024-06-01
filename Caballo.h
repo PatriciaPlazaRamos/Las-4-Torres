@@ -17,7 +17,13 @@ class Caballo : public Pieza
 public:
 
 	Caballo(char _color) {
-	
+		color = _color;
+		tipo = TYPEPIEZA(CABALLO);
+		imagen1.setCenter(-1, -0.5); //blancas
+		imagen1.setSize(3, 5);
+		imagen2.setCenter(-1, -0.5);
+		imagen2.setSize(3, 5);
+
 	}
 
 	virtual~Caballo() {};
@@ -25,6 +31,5 @@ public:
 
 	void dibuja() override;
 
-	// PRUEBA
 	bool mover(int xInicial, int yInicial, int xFinal, int yFinal, bool ocupado, Tablero& t) override;
 };
