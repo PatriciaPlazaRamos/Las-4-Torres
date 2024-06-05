@@ -9,14 +9,14 @@ public:
 
 	void dibuja();
 	void tecla(unsigned char key);
-	//void onMouseClick(int button, int state, int x, int y);
+	void onMouseClick(int button, int state, int x, int y);
 
 	friend class Tablero;
 
 
 protected:
 
-	enum Estado { INICIO, JUGAR, FIN };
+	enum Estado { INICIO, ALAMOS, SYLVERMAN, FIN };
 	Estado estado;
 
 	Tablero tablero;
